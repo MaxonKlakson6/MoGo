@@ -1,0 +1,43 @@
+@import 'blanks.scss';
+
+.devices{
+  position: relative;
+  background: url("../images/devices/devices-bg.png");
+  background-size: cover;
+  padding-bottom: 57px;
+
+  &:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  .container{
+    @include desktop-width();
+
+      .tablet{
+        height: 525px;
+        margin-top: 59px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("../images/devices/tablet.png");
+        
+        .tablet__inner{
+          width: 56%;
+          height: 96%;
+          background-image: url('../images/devices/tablet-inner.png');
+        }
+
+        &:after{
+          content: url("../images/devices/phone.png");
+          position: absolute;
+          top: 212px;
+          right: 200px;
+        }
+      }
+  }
+}

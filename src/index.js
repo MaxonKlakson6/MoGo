@@ -1,1 +1,9 @@
-import './scss/style.scss'
+import './scss/reset.scss';
+import './scss/header.scss';
+import './scss/general.scss';
+import './scss/fonts.scss';
+import './scss/about.scss';
+import './scss/futures.scss';
+import './scss/services.scss';
+import './scss/devices.scss';
+import './scss/facilities.scss';

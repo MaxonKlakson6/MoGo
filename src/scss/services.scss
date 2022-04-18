@@ -1,0 +1,40 @@
+@import 'blanks.scss';
+
+.services{
+  @include desktop-width();
+
+  .services__list{
+    margin: 88px 0 91px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .services__item{
+      width: 33.3%;
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 66px;
+
+      &:nth-child(n + 4){
+        padding: 66px 0 0;
+      }
+
+      img{
+        align-self: flex-start;
+      }
+
+      .item__description{
+        align-self: center;
+        margin-left: 30px;
+
+        .description__title{
+          @include font(Raleway, 24px, 700, $black);
+          padding: 24px 0;
+        }
+        .description__text{
+          @include font(Raleway, 18px, 400, $black);
+          padding: 22px 0;
+        }
+      }
+    }
+  }
+}

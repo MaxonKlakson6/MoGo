@@ -1,0 +1,48 @@
+@import 'blanks.scss';
+
+.facilities{
+  @include desktop-width();
+  margin-bottom: 114px;
+}
+.facilities__list{
+  margin: 42px 0 0;
+  display: flex;
+  justify-content: space-between;
+
+  .accordion{
+    width: 49%;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+
+    .accordion-item{
+      border-radius: 0;
+      border: 1px solid #C6CBCD;
+
+      .accordion-button:not(.collapsed){
+        background-color: transparent;
+        color: $black;
+      }
+      .accordion-button:after{
+        background-image: url("../images/facilities/arrow.svg");
+        width: 2.6rem;
+        height: 2.6rem;
+        background-size: 2.6rem;
+        margin: 0;
+      }
+      .accordion-button{
+        justify-content: space-between;
+      }
+      p{
+        @include font(Raleway, 24px, 700, $black);
+        width: 66.4%;
+        align-self: center;
+        margin-bottom: 0;
+      }
+
+      .accordion-body{
+        @include font(Raleway, 18px, 400, $black);
+      }
+    }
+  }
+}
