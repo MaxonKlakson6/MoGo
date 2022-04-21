@@ -2,24 +2,114 @@
 
 .about{
   @include desktop-width();
-  margin-bottom: 106px;
+  margin-bottom: 108px;
 
   .about__photos{
     display: flex;
     justify-content: space-between;
+    margin-top: 58px;
 
     .photos__item{
       cursor: pointer;
       position: relative;
+      width: 32.5%;
+      height: 338px;
+      background-color: $turquoise;
 
-      &:hover:before{
-        content: '';
-        position: absolute;
+      .item__inner{
         width: 100%;
         height: 100%;
-        background-color: $turquoise;
+        background-size: cover;
+        transition: .5s;
+      }
+      #left-image{
+        background-image: url("../images/about/something.png");
+
+        &:hover{
+          background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%);
+          transform: translate(-16px, -16px);
+        }
       }
 
+      #middle-image{
+        background-image: url("../images/about/wall.png");
+
+        &:hover{
+          background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%);
+          transform: translate(-16px, -16px);
+        }
+      }
+
+      #right-image{
+        background-image: url("../images/about/building.png");
+
+        &:hover{
+          background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%);
+          transform: translate(-16px, -16px);
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 1024px){
+  .about{
+    margin-bottom: 60px;
+
+    .about__photos{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 48px;
+
+      .photos__item{
+        height: 282px;
+      }
+    }
+  }
+}
+
+@media(max-width: 768px){
+  .about{
+    .about__photos{
+      display: flex;
+      flex-direction: column;
+      margin: 16px auto 0;
+
+      .photos__item{
+        width: 100%;
+        height: 258px;
+        margin-bottom: 16px;
+
+        .item__inner{
+          height: 83px;
+        }
+        #left-image{
+          background-image: url("../images/about/something.png");
+
+          &:hover{
+            background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%);
+            transform: translate(-16px, -16px);
+          }
+        }
+
+        #middle-image{
+          background-image: url("../images/about/wall.png");
+
+          &:hover{
+            background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%);
+            transform: translate(-16px, -16px);
+          }
+        }
+
+        #right-image{
+          background-image: url("../images/about/building.png");
+
+          &:hover{
+            background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%);
+            transform: translate(-16px, -16px);
+          }
+        }
+      }
     }
   }
 }
