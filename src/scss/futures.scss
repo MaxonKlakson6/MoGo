@@ -30,3 +30,50 @@
     }
   }
 }
+
+@media(max-width: 1024px){
+  .futures{
+    .container{
+      height: 166px;
+
+      .futures__item{
+        span{
+          padding: 0;
+          font-size: 48px;
+          line-height: 75px;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 768px){
+  .futures{
+    background-color: $turquoise;
+
+    .container{
+      @include desktop-width();
+      height: auto;
+      display: grid;
+      grid-template-columns: 144px 144px;
+      justify-content: center;
+
+      .futures__item{
+        width: auto;
+        border-bottom: 1px solid #fff;
+        font-size: 20px;
+
+        span{
+          font-weight: 700;
+          font-size: 48px;
+          line-height: 100px;
+        }
+
+        &:nth-child(odd){
+          border-right: 0;
+          border-left: 0;
+        }
+      }
+    }
+  }
+}

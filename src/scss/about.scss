@@ -79,36 +79,48 @@
         width: 100%;
         height: 258px;
         margin-bottom: 16px;
+        background-size: cover;
 
         .item__inner{
           height: 83px;
+          position: relative;
+
         }
+
+
         #left-image{
-          background-image: url("../images/about/something.png");
+          background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%);
 
           &:hover{
-            background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%);
-            transform: translate(-16px, -16px);
+            transform: none;
           }
         }
 
         #middle-image{
-          background-image: url("../images/about/wall.png");
+          background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%);
 
           &:hover{
-            background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%);
-            transform: translate(-16px, -16px);
+            transform: none;
           }
         }
 
         #right-image{
-          background-image: url("../images/about/building.png");
+          background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%);
 
           &:hover{
-            background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%);
-            transform: translate(-16px, -16px);
+            transform: none;
           }
         }
+      }
+      #first-item{
+        background-image: url("../images/about/something.png");
+      }
+
+      #second-item{
+        background-image: url("../images/about/wall.png");
+      }
+      #third-item{
+        background-image: url("../images/about/building.png");
       }
     }
   }
