@@ -17,27 +17,82 @@
   .container{
     @include desktop-width();
 
-      .tablet{
-        height: 525px;
+      .tablet-holder{
         margin-top: 59px;
-        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-image: url("../images/devices/tablet.png");
-        
-        .tablet__inner{
-          width: 56%;
-          height: 96%;
-          background-image: url('../images/devices/tablet-inner.png');
+        position: relative;
+
+        .tablet{
+          z-index: 2;
+          object-fit: cover;
+          width: 60.2%;
         }
 
-        &:after{
-          content: url("../images/devices/phone.png");
+        .tablet-inner{
           position: absolute;
-          top: 212px;
-          right: 200px;
+          width: 57%;
+        }
+
+        .tablet-phone{
+          position: absolute;
+          width: 17.5%;
+          z-index: 3;
+          right: 17%;
+          bottom: -20%;
         }
       }
+  }
+}
+
+@media (max-width: 1024px) {
+  .devices{
+    padding-bottom: 38px;
+
+    .container{
+      .tablet-holder{
+        margin-top: 40px;
+
+        .tablet{
+          width: 47.2%;
+        }
+
+        .tablet-inner{
+          width: 44.6%;
+        }
+
+        .tablet-phone{
+          width: 13.5%;
+          right: 24%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .devices{
+    padding-bottom: 38px;
+
+    .container{
+      .tablet-holder{
+        margin-top: 40px;
+        width: 100%;
+
+        .tablet{
+          width: 100%;
+        }
+
+        .tablet-inner{
+          width: 97%;
+        }
+
+        .tablet-phone{
+          width: 28.7%;
+          right: 9%;
+        }
+      }
+    }
   }
 }

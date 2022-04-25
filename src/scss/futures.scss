@@ -7,6 +7,7 @@
     @include desktop-width();
     height: 250px;
     display: flex;
+    padding: 0 16px;
 
     .futures__item{
       @include font(Raleway, 24px, 400, #fff);
@@ -55,16 +56,16 @@
       @include desktop-width();
       height: auto;
       display: grid;
-      grid-template-columns: 144px 144px;
+      grid-template-columns: 1fr 1fr;
       justify-content: center;
 
       .futures__item{
         width: auto;
+        padding-bottom: 12px;
         border-bottom: 1px solid #fff;
         font-size: 20px;
 
         span{
-          font-weight: 700;
           font-size: 48px;
           line-height: 100px;
         }
@@ -73,6 +74,11 @@
           border-right: 0;
           border-left: 0;
         }
+      }
+
+      .futures__item:last-child{
+        border-bottom: 0;
+        grid-column: 1/3;
       }
     }
   }

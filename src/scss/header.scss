@@ -5,6 +5,7 @@ $font: 24px;
 .header{
   position: relative;
   background-image: $bg-header;
+  background-position: center;
   background-size: cover;
 
   &:before{

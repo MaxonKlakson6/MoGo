@@ -13,40 +13,47 @@
       cursor: pointer;
       position: relative;
       width: 32.5%;
-      height: 338px;
       background-color: $turquoise;
+
+      .about__picture{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 2;
+        transition: .5s;
+      }
 
       .item__inner{
         width: 100%;
         height: 100%;
-        background-size: cover;
+        position: absolute;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%);
         transition: .5s;
-      }
-      #left-image{
-        background-image: url("../images/about/something.png");
 
-        &:hover{
-          background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%);
-          transform: translate(-16px, -16px);
+        .inner__flex-item{
+          text-align: center;
+
+          .inner__user-plus-logo{
+            margin-bottom: 30px;
+          }
+          .inner__text{
+            @include font(Raleway, 24px, 500, #fff);
+          }
         }
       }
 
-      #middle-image{
-        background-image: url("../images/about/wall.png");
-
-        &:hover{
-          background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%);
-          transform: translate(-16px, -16px);
-        }
+      .item__inner:hover{
+        z-index: 2;
+        transform: translate(-16px, -16px);
       }
-
-      #right-image{
-        background-image: url("../images/about/building.png");
-
-        &:hover{
-          background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%);
-          transform: translate(-16px, -16px);
-        }
+      .about__picture:hover~.item__inner{
+        z-index: 2;
+        transform: translate(-16px, -16px);
       }
     }
   }
@@ -57,12 +64,28 @@
     margin-bottom: 60px;
 
     .about__photos{
-      display: flex;
-      justify-content: space-between;
       margin-top: 48px;
 
       .photos__item{
-        height: 282px;
+
+        .item__inner{
+          .inner__flex-item{
+
+            .inner__user-plus-logo{
+              width: 33px;
+              margin-bottom: 25px;
+            }
+            .inner__text{
+              font-size: 18px;
+            }
+          }
+        }
+        .item__inner:hover{
+          transform: translate(-6px, -6px);
+        }
+        .about__picture:hover~.item__inner{
+          transform: translate(-6px, -6px);
+        }
       }
     }
   }
@@ -70,57 +93,55 @@
 
 @media(max-width: 768px){
   .about{
+    margin-bottom: 59px;
+
     .about__photos{
-      display: flex;
       flex-direction: column;
-      margin: 16px auto 0;
+      align-items: center;
+      margin-top: 16px;
 
       .photos__item{
         width: 100%;
-        height: 258px;
-        margin-bottom: 16px;
-        background-size: cover;
+        max-width: 288px;
+
+        &:not(:last-child){
+          margin-bottom: 16px;
+        }
+
+        .about__picture{
+          max-height: 258px;
+        }
 
         .item__inner{
-          height: 83px;
-          position: relative;
+          max-height: 83px;
+          top: calc(100% - 83px);
+          z-index: 2;
 
-        }
+          .inner__flex-item{
+            width: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
 
-
-        #left-image{
-          background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%);
-
-          &:hover{
-            transform: none;
+            .inner__user-plus-logo{
+              width: 30px;
+              margin: 0 0 0 14px;
+            }
+            .inner__text{
+              text-align: left;
+              width: 100%;
+              line-height: 30px;
+              margin-left: 32px;
+            }
           }
         }
 
-        #middle-image{
-          background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%);
-
-          &:hover{
-            transform: none;
-          }
+        .item__inner:hover{
+          transform: translate(0, 0);
         }
-
-        #right-image{
-          background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%);
-
-          &:hover{
-            transform: none;
-          }
+        .about__picture:hover~.item__inner{
+          transform: translate(0, 0);
         }
-      }
-      #first-item{
-        background-image: url("../images/about/something.png");
-      }
-
-      #second-item{
-        background-image: url("../images/about/wall.png");
-      }
-      #third-item{
-        background-image: url("../images/about/building.png");
       }
     }
   }

@@ -7,3 +7,5 @@ import './scss/futures.scss';
 import './scss/services.scss';
 import './scss/devices.scss';
 import './scss/facilities.scss';
+import './scss/reviews.scss';
+import './scss/team.scss';
