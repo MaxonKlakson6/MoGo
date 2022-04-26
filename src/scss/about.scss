@@ -46,7 +46,13 @@
           }
         }
       }
-
+      .item__inner:hover:before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border: 2px solid green;
+      }
       .item__inner:hover{
         z-index: 2;
         transform: translate(-16px, -16px);

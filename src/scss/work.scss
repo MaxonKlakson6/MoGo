@@ -1,0 +1,9 @@
+@import "blanks";
+
+.work{
+  @include desktop-width();
+
+  .pictures__list{
+    display: grid;
+  }
+}

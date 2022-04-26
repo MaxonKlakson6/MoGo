@@ -9,3 +9,5 @@ import './scss/devices.scss';
 import './scss/facilities.scss';
 import './scss/reviews.scss';
 import './scss/team.scss';
+import './scss/partners.scss';
+import './scss/work.scss';

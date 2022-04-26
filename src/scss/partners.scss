@@ -1,0 +1,73 @@
+@import "blanks";
+
+.partners{
+  background-color: #F8F8F8;
+
+  .logos__holder{
+    @include desktop-width();
+    padding: 42px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .partners{
+    .logos__holder{
+      padding: 28px 16px;
+
+      img{
+        width: 86px;
+      }
+
+      #figure-3{
+        width: 49px;
+        height: 45px;
+      }
+      #figure-4{
+        width: 54px;
+      }
+      #figure-5{
+        width: 46px;
+        height: 45px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .partners{
+    .logos__holder{
+      padding: 30px 16px 21px;
+      display: grid;
+      justify-items: center;
+      row-gap: 20px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+      "a b"
+      "e e"
+      "d c"
+      "f f";
+
+      #figure-1{
+        grid-area: a;
+      }
+      #figure-2{
+        grid-area: b;
+      }
+      #figure-3{
+        grid-area: c;
+      }
+      #figure-4{
+        grid-area: d;
+      }
+      #figure-5{
+        grid-area: e;
+      }
+      #figure-6{
+        grid-area: f;
+      }
+    }
+  }
+}
