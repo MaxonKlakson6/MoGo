@@ -12,3 +12,5 @@ import './scss/team.scss';
 import './scss/partners.scss';
 import './scss/work.scss';
 import './scss/reviews-2.scss';
+import './scss/clients.scss';
+import './scss/stories.scss';

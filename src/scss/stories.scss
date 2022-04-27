@@ -1,0 +1,174 @@
+@import "blanks";
+
+.stories{
+  @include desktop-width();
+  padding: 0 16px;
+  margin-bottom: 84px;
+
+  .stories__list{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 42px;
+
+    .stories__item{
+      width: 32.5%;
+      display: flex;
+      flex-direction: column;
+
+      &:not(:last-child){
+        margin-right: 30px;
+      }
+
+      .item__photo-holder{
+        position: relative;
+
+        img{
+          width: 100%;
+        }
+        .date{
+          @include font(Raleway, 36px, 700, #fff);
+          width: 80px;
+          height: 80px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          position: absolute;
+          bottom: 25px;
+          left: -14px;
+          align-items: center;
+          background-color: $turquoise;
+
+          span{
+            @include font(Raleway, 18px, 400, #fff);
+          }
+        }
+      }
+
+      .item__article{
+        margin-top: 30px;
+
+        .article__title{
+          @include font(Raleway, 24px, 700, $black);
+          padding: 6px 0;
+        }
+
+        .article__content{
+          @include font(Raleway, 18px, 400, $black);
+          padding: 15px 0;
+        }
+      }
+
+      .post-info{
+        display: flex;
+
+        .views{
+          margin-right: 16px;
+        }
+        .stories__icon{
+          width: 32px;
+          margin-right: 16px;
+        }
+        .count{
+          @include font(Raleway, 13px, 400, $black);
+          width: 52px;
+          height: 32px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .stories{
+    margin-bottom: 58px;
+    .stories__list{
+      margin-top: 36px;
+
+      .stories__item{
+
+        &:not(:last-child){
+          margin-right: 20px;
+        }
+
+        .item__photo-holder{
+
+          .date{
+            font-size: 24px;
+            width: 67px;
+            height: 67px;
+            bottom: 21px;
+            left: -9px;
+            justify-content: center;
+
+            span{
+              margin-top: 6px;
+              font-size: 14px;
+            }
+          }
+        }
+
+        .item__article{
+          margin-top: 26px;
+
+          .article__title{
+            font-size: 18px;
+            padding: 6px 0;
+          }
+
+          .article__content{
+            font-size: 14px;
+            padding: 22.5px 0;
+          }
+        }
+
+        .post-info{
+
+          .views{
+            margin-right: 18px;
+          }
+          .stories__icon{
+            width: 27px;
+            margin-right: 13px;
+          }
+          .count{
+            font-size: 12px;
+            width: 44px;
+            height: 27px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .stories{
+    margin-bottom: 28px;
+
+    .stories__list{
+      flex-direction: column;
+
+      .stories__item{
+        width: 100%;
+
+        &:not(:last-child){
+          margin-right: 0;
+        }
+        &:not(:first-child){
+          margin-top: 30px;
+        }
+
+        .item__photo-holder{
+
+          .date{
+            left: 0;
+          }
+        }
+
+        .item__article{
+          margin-top: 26px;
+        }
+      }
+    }
+  }
+}
