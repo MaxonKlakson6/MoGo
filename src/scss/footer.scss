@@ -1,17 +1,25 @@
 @import "blanks";
 
+$grey: #C6CBCD;
+
 .footer{
   display: flex;
   flex-direction: column;
   background-color: #F8F8F8;
   padding: 0 16px;
 
+  .footer__hr{
+    border: 0;
+    height: 1px;
+    opacity: 1;
+    background-color: $grey;
+  }
+
   .footer__list{
     @include desktop-width();
     width: 100%;
     margin: 42px auto;
-    display: grid;
-    grid-template-columns: 2fr 3fr 1fr;
+    display: flex;
 
     .footer__item{
       position: relative;
@@ -21,8 +29,123 @@
       }
 
       .left-column{
+        max-width: 370px;
         display: flex;
         flex-direction: column;
+
+        .mogo-logo{
+          width: 270px;
+        }
+
+        .left-column__text{
+          @include font(Raleway, 18px, 400, $grey);
+          padding: 25px 0;
+        }
+        .followers-number{
+          @include font(Raleway, 36px, 700, $black);
+          padding: 22px 0;
+
+          .followers-k{
+            @include font(Raleway, 18px, 700, $black);
+          }
+          .followers{
+            @include font(Raleway, 18px, 400, $black);
+            font-style: italic;
+          }
+        }
+
+        .above-email{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .footer__follow{
+            @include font(Raleway, 13px, 400, $grey);
+            font-style: italic;
+            padding: 15px 0;
+          }
+
+          .logos__holder{
+            display: flex;
+
+
+            .company-logo:not(:last-child){
+              margin-right: 10px;
+            }
+          }
+        }
+
+        form{
+          margin-top: 37px;
+          display: flex;
+
+          input[type="email"]{
+            border-radius: 0;
+            outline: 0;
+            border: 1px solid $grey;
+            border-right: 0;
+            text-align: center;
+            padding: 13.5px 0;
+
+            &:focus{
+              text-align: left;
+            }
+          }
+
+          button[type="submit"]{
+            @include font(Raleway, 18px, 700, #fff);
+            width: 133px;
+            border: 0;
+            background-color: $turquoise;
+
+            &:hover{
+              background-color: #87D2C4;
+            }
+            &:active{
+              background-color: #5C958A;
+            }
+          }
+        }
+      }
+
+      .middle-column{
+        max-width: 470px;
+
+        .middle-column__title{
+          @include font(Raleway, 24px, 700, $black);
+          line-height: 100px;
+        }
+
+        .blog-list{
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .blog-item:not(:last-child){
+            margin-bottom: 20px;
+          }
+
+          .blog-item{
+            display: flex;
+
+            .blog-image{
+              margin-right: 30px;
+            }
+
+            .text-place{
+
+              .blog__name{
+                @include font(Raleway, 18px, 700, $black);
+                text-transform: uppercase;
+                padding: 3px 0;
+              }
+              .blog__date{
+                @include font(Raleway, 13px, 400, $black);
+                padding: 11px 0;
+              }
+            }
+          }
+        }
       }
     }
   }
