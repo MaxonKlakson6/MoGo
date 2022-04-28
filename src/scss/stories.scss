@@ -145,6 +145,10 @@
   .stories{
     margin-bottom: 28px;
 
+    .stories__hr{
+      width: 148px;
+    }
+
     .stories__list{
       flex-direction: column;
 

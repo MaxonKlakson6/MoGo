@@ -14,3 +14,5 @@ import './scss/work.scss';
 import './scss/reviews-2.scss';
 import './scss/clients.scss';
 import './scss/stories.scss';
+import './scss/map.scss';
+import './scss/footer.scss';

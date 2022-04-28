@@ -1,0 +1,42 @@
+@import 'blanks';
+
+.map{
+  background: no-repeat url('../images/map/map-bg.png');
+  background-size: cover;
+  padding-bottom: 42px;
+
+  img{
+    width: 42px;
+  }
+
+  .map__subtitle{
+    color: $pink;
+  }
+}
+
+@media (max-width: 1024px) {
+  .map {
+    padding-bottom: 28px;
+
+    img {
+      width: 28px;
+    }
+  }
+}
+
+@media (max-width: 768px){
+  .map{
+    background: no-repeat url('../images/map/map-bg.png');
+    background-size: cover;
+    padding-top: 13px;
+    padding-bottom: 42px;
+
+    img{
+      width: 42px;
+    }
+
+    .map__subtitle{
+      color: $pink;
+    }
+  }
+}

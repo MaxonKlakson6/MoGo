@@ -1,0 +1,29 @@
+@import "blanks";
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  background-color: #F8F8F8;
+  padding: 0 16px;
+
+  .footer__list{
+    @include desktop-width();
+    width: 100%;
+    margin: 42px auto;
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+
+    .footer__item{
+      position: relative;
+
+      &:not(:last-child){
+        margin-right: 30px;
+      }
+
+      .left-column{
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
