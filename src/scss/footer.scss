@@ -2,150 +2,408 @@
 
 $grey: #C6CBCD;
 
-.footer{
+.footer {
   display: flex;
   flex-direction: column;
   background-color: #F8F8F8;
   padding: 0 16px;
 
-  .footer__hr{
+  .footer__hr {
     border: 0;
     height: 1px;
     opacity: 1;
     background-color: $grey;
   }
 
-  .footer__list{
+  .footer__list {
     @include desktop-width();
     width: 100%;
     margin: 42px auto;
     display: flex;
 
-    .footer__item{
+    .footer__item {
       position: relative;
 
-      &:not(:last-child){
+      &:not(:last-child) {
         margin-right: 30px;
       }
 
-      .left-column{
+      .left-column {
         max-width: 370px;
+        width: 100%;
         display: flex;
         flex-direction: column;
 
-        .mogo-logo{
+        .mogo-logo {
           width: 270px;
         }
 
-        .left-column__text{
+        .left-column__text {
           @include font(Raleway, 18px, 400, $grey);
           padding: 25px 0;
         }
-        .followers-number{
+
+        .followers-number {
           @include font(Raleway, 36px, 700, $black);
           padding: 22px 0;
 
-          .followers-k{
+          .followers-k {
             @include font(Raleway, 18px, 700, $black);
           }
-          .followers{
+
+          .followers {
             @include font(Raleway, 18px, 400, $black);
             font-style: italic;
           }
         }
 
-        .above-email{
+        .above-email {
           display: flex;
           justify-content: space-between;
           align-items: center;
 
-          .footer__follow{
+          .footer__follow {
             @include font(Raleway, 13px, 400, $grey);
+            width: 20%;
+            margin-right: 30px;
             font-style: italic;
             padding: 15px 0;
           }
 
-          .logos__holder{
+          .logos__holder {
             display: flex;
-
-
-            .company-logo:not(:last-child){
-              margin-right: 10px;
-            }
+            justify-content: space-between;
+            width: 80%;
           }
         }
 
-        form{
+        form {
           margin-top: 37px;
           display: flex;
 
-          input[type="email"]{
+          input[type="email"] {
+            @include font(Raleway, 18px, 400, $grey);
+            height: 55px;
             border-radius: 0;
             outline: 0;
             border: 1px solid $grey;
             border-right: 0;
             text-align: center;
-            padding: 13.5px 0;
 
-            &:focus{
+            &:focus {
               text-align: left;
             }
           }
 
-          button[type="submit"]{
+          button[type="submit"] {
             @include font(Raleway, 18px, 700, #fff);
             width: 133px;
             border: 0;
             background-color: $turquoise;
 
-            &:hover{
+            &:hover {
               background-color: #87D2C4;
             }
-            &:active{
+
+            &:active {
               background-color: #5C958A;
             }
           }
         }
       }
 
-      .middle-column{
+      .middle-column {
         max-width: 470px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
-        .middle-column__title{
+        .middle-column__title {
           @include font(Raleway, 24px, 700, $black);
           line-height: 100px;
         }
 
-        .blog-list{
+        .blog-item {
           display: flex;
-          flex-direction: column;
-          justify-content: space-between;
 
-          .blog-item:not(:last-child){
-            margin-bottom: 20px;
+          .blog-image {
+            width: 170px / 470px * 100%;
+            align-self: flex-start;
+            object-fit: cover;
+            margin-right: 30px;
           }
 
-          .blog-item{
-            display: flex;
+          .text-place {
 
-            .blog-image{
-              margin-right: 30px;
+            .blog__name {
+              @include font(Raleway, 18px, 700, $black);
+              text-transform: uppercase;
+              padding: 3px 0;
             }
 
-            .text-place{
+            .blog__date {
+              @include font(Raleway, 13px, 400, $black);
+              padding: 11px 0;
+            }
+          }
+        }
+      }
 
-              .blog__name{
-                @include font(Raleway, 18px, 700, $black);
-                text-transform: uppercase;
-                padding: 3px 0;
+      .right-column {
+        max-width: 270px;
+        width: 100%;
+
+        .right-column__title {
+          @include font(Raleway, 24px, 700, $black);
+          line-height: 100px;
+        }
+
+        .image-holder {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+
+          .instagram-image {
+            width: 100%;
+          }
+        }
+
+        .all-photo {
+          @include font(Raleway, 13px, 400, $black);
+          text-decoration: underline;
+          line-height: 91px;
+        }
+      }
+    }
+  }
+
+  .additional-info {
+    @include desktop-width();
+    width: 100%;
+
+    .text {
+      @include font(Raleway, 13px, 700, $black);
+      text-align: center;
+      padding: 17.5px 0;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer {
+
+    .footer__list {
+      margin: 28px auto;
+
+      .footer__item {
+
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+
+        .left-column {
+
+          .mogo-logo {
+            width: 183px;
+          }
+
+          .left-column__text {
+            font-size: 14px;
+            padding: 19.5px 0;
+          }
+
+          .followers-number {
+            font-size: 24px;
+            padding: 15px 0;
+
+            .followers-k {
+              font-size: 14px;
+            }
+
+            .followers {
+              font-size: 14px;
+            }
+          }
+
+          .above-email {
+
+            .footer__follow {
+              font-size: 12px;
+              margin-right: 20px;
+              padding: 8.5px 0;
+            }
+
+            .logos__holder {
+
+              .company-logo {
+                width: 16px;
               }
-              .blog__date{
-                @include font(Raleway, 13px, 400, $black);
-                padding: 11px 0;
+            }
+          }
+
+          form {
+            margin-top: 25px;
+
+            input[type="email"] {
+              font-size: 14px;
+              height: 37px;
+            }
+
+            button[type="submit"] {
+              font-size: 14px;
+              width: 145px;
+
+              &:hover {
+                background-color: #87D2C4;
+              }
+
+              &:active {
+                background-color: #5C958A;
               }
             }
           }
         }
+
+        .middle-column {
+          height: auto;
+
+          .middle-column__title {
+            font-size: 18px;
+            line-height: 67px;
+          }
+
+          .blog-item:not(:last-child){
+            margin-bottom: 13.5px;
+          }
+          .blog-item {
+
+            .blog-image {
+              width: 115px / 402px * 100%;
+              margin-right: 20px;
+            }
+
+            .text-place {
+
+              .blog__name {
+                font-size: 14px;
+                padding: 7px 0;
+              }
+
+              .blog__date {
+                font-size: 12px;
+                padding: 5.5px 0;
+              }
+            }
+          }
+        }
+
+        .right-column {
+
+          .right-column__title {
+            font-size: 18px;
+            line-height: 68px;
+          }
+
+          .all-photo {
+            font-size: 12px;
+            line-height: 42px;
+          }
+        }
+      }
+    }
+
+    .additional-info {
+
+      .text {
+        padding: 15px 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px){
+  .footer {
+
+    .footer__list {
+      margin: 28px auto 0;
+      flex-direction: column;
+      align-items: center;
+
+      .footer__item {
+
+        &:not(:last-child) {
+          margin-right: 0;
+        }
+
+        .left-column {
+          max-width: 100%;
+          text-align: center;
+
+          .mogo-logo {
+            align-self: flex-end;
+            width: 190px / 288px * 100%;
+          }
+
+          .left-column__text {
+            padding: 11px 0;
+          }
+
+
+          form {
+            flex-direction: column;
+
+            button[type="submit"] {
+              width: 100%;
+              height: 37px;
+              margin-top: 24px;
+            }
+          }
+        }
+
+        .middle-column {
+          max-width: 100%;
+          width: 100%;
+          height: 100%;
+
+          .middle-column__title {
+            text-align: center;
+          }
+
+          .blog-item {
+            display: flex;
+
+            .blog-image {
+              width: 83px / 292px * 100%;
+              align-self: stretch;
+              object-fit: cover;
+              margin-right: 14px;
+            }
+
+            .text-place {
+              .blog__name{
+                padding: 0;
+              }
+            }
+          }
+        }
+
+        .right-column {
+          max-width: 100%;
+          text-align: center;
+
+          .all-photo {
+            line-height: 80px;
+          }
+        }
+      }
+    }
+
+    .additional-info {
+
+      .text {
+        text-transform: uppercase;
+        padding: 7px 0;
       }
     }
   }
