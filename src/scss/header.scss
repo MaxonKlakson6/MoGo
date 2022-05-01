@@ -53,6 +53,7 @@ $font: 24px;
       padding-bottom: 10px;
       text-align: center;
       width: 85px;
+      border-bottom: 1px solid transparent;
 
       &:hover{
         color: #F4BF87;
@@ -60,6 +61,7 @@ $font: 24px;
       }
     }
     img{
+      cursor: pointer;
       padding-bottom: 10px;
     }
   }
@@ -113,16 +115,28 @@ $font: 24px;
 
       .slider__item{
         @include font(Raleway, 36px, 700, #fff);
+        position: relative;
         line-height: 85px;
         opacity: .5;
         width: 23%;
         border-top: 4px solid #fff;
+        cursor: pointer;
+
+        &:hover{
+          opacity: 1;
+        }
+
+        &:hover:before{
+          content: '';
+          width: 70px;
+          height: 4px;
+          top: -4px;
+          position: absolute;
+          background-color: $pink;
+        }
 
         span{
           @include font(Raleway, 18px, 500, #fff);
-        }
-        &:first-child{
-          opacity: 1;
         }
       }
     }
@@ -195,6 +209,7 @@ $font: 24px;
   .header{
     .header__nav-bar{
       flex-direction: column;
+      z-index: 3;
 
       .nav-bar__logo{
         width: 57px;
@@ -208,13 +223,24 @@ $font: 24px;
         background-image: url("../images/header/icon_menu.svg");
       }
 
+      .active-btn{
+        background-image: url("../images/header/icon_menu-close.svg");
+      }
+
       .nav-bar__menu{
         width: 100%;
         display: flex;
         flex-direction: column;
+        background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%), url(../images//header/background-image.png);
+        background-size: cover;
+        background-position: center;
 
         img{
           display: none;
+        }
+
+        .link:nth-child(5){
+          padding-bottom: 171px;
         }
       }
 
@@ -223,6 +249,14 @@ $font: 24px;
         padding-bottom: 0;
         width: 280px;
         line-height: 63px;
+      }
+      
+      .active:last-child{
+        padding-bottom: 148px;
+      }
+
+      .active{
+        display: block;
       }
     }
 
@@ -255,6 +289,11 @@ $font: 24px;
 
         .slider__item{
           padding-bottom: 52px;
+
+          &:hover:before{
+            width: 100%;
+          }
+
           div{
             display: none;
           }
