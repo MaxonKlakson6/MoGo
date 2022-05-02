@@ -2,6 +2,28 @@
 
 .reviews-2{
 
+  button{
+    .next{
+      transform: rotate(180deg);
+    }
+  }
+
+  .carousel-indicators{
+    display: none;
+    button{
+      width: 10px;
+      height: 10px;
+      margin: 0 20px;
+      background: transparent;
+      border: 1px solid #C6CBCD;
+      opacity: 1;
+      border-radius: 50%;
+    }
+    .active{
+      background-color: #C6CBCD;
+    }
+  }
+
   .reviews__content{
     padding: 42px 16px;
     display: flex;
@@ -86,8 +108,21 @@
 
 @media (max-width: 768px){
   .reviews-2{
+
+    .carousel-control-next{
+      display: none;
+    }
+
+    .carousel-control-prev{
+      display: none;
+    }
+
+    .carousel-indicators{
+      display: flex;
+    }
+
     .reviews__content{
-      padding: 29px 16px;
+      padding: 29px 16px 63px;
 
       .content-holder{
         flex-direction: column;

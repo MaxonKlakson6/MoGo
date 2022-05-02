@@ -207,6 +207,10 @@ $font: 24px;
 
 @media (max-width: 768px) {
   .header{
+    .hidden{
+      z-index: -1;
+    }
+
     .header__nav-bar{
       flex-direction: column;
       z-index: 3;
@@ -229,11 +233,9 @@ $font: 24px;
 
       .nav-bar__menu{
         width: 100%;
+        margin-top: 28px;
         display: flex;
         flex-direction: column;
-        background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%), url(../images//header/background-image.png);
-        background-size: cover;
-        background-position: center;
 
         img{
           display: none;
@@ -249,10 +251,6 @@ $font: 24px;
         padding-bottom: 0;
         width: 280px;
         line-height: 63px;
-      }
-      
-      .active:last-child{
-        padding-bottom: 148px;
       }
 
       .active{

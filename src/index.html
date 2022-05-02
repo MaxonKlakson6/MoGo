@@ -10,7 +10,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>
-    <script src="index.js" type="module"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -250,19 +251,32 @@
         </div>
     </div>
     <div class="reviews">
-        <div class="reviews__content">
-            <img src="images/reviews/arrow.svg" alt="">
-            <div class="content-holder">
-                <img src="images/reviews/message.svg" alt="">
-                <div class="reviews__text">
-                    <p class="text__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque nec diam
-                        platea ullamcorper feugiat amet. Id aliquet vehicula feugiat arcu arcu nulla ornare. Sed amet
-                        venenatis, massa sit.</p>
-                    <hr class="text__hr">
-                    <h2 class="text__user-name">Jon Doe</h2>
+        <div class="reviews-container swiper">
+                <div class="reviews__content swiper-wrapper">
+                    <div class="content-holder swiper-slide">
+                        <img src="images/reviews/message.svg" alt="">
+                        <div class="reviews__text">
+                            <p class="text__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque nec diam
+                                platea ullamcorper feugiat amet. Id aliquet vehicula feugiat arcu arcu nulla ornare. Sed amet
+                                venenatis, massa sit.</p>
+                            <hr class="text__hr">
+                            <h2 class="text__user-name">Jon Doe</h2>
+                        </div>
+                    </div>
+                    <div class="content-holder swiper-slide">
+                        <img src="images/reviews/message.svg" alt="">
+                        <div class="reviews__text">
+                            <p class="text__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque nec diam
+                                platea ullamcorper feugiat amet. Id aliquet vehicula feugiat arcu arcu nulla ornare. Sed amet
+                                venenatis, massa sit.</p>
+                            <hr class="text__hr">
+                            <h2 class="text__user-name">Jon Doe</h2>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <img src="images/reviews/arrow.svg" alt="">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
         </div>
     </div>
     <div class="team">
@@ -424,21 +438,64 @@
             </div>
         </div>
     </div>
-    <div class="reviews-2">
-        <div class="reviews__content">
-            <img src="images/reviews/arrow.svg" alt="">
-            <div class="content-holder">
-                <img src="images/reviews-2/James.png" alt="">
-                <div class="reviews__text">
-                    <p class="text__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque nec diam
-                        platea ullamcorper feugiat amet. Id aliquet vehicula feugiat arcu arcu nulla ornare. Sed amet
-                        venenatis, massa sit.</p>
-                    <hr class="text__hr">
-                    <h2 class="text__user-name">James Philips</h2>
+    <div id="reviews-2" class="reviews-2 carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#reviews-2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#reviews-2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#reviews-2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="reviews__content">
+                    <div class="content-holder">
+                        <img src="images/reviews-2/James.png" alt="">
+                        <div class="reviews__text">
+                            <p class="text__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque nec diam
+                                platea ullamcorper feugiat amet. Id aliquet vehicula feugiat arcu arcu nulla ornare. Sed amet
+                                venenatis, massa sit.</p>
+                            <hr class="text__hr">
+                            <h2 class="text__user-name">James Philips</h2>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <img src="images/reviews/arrow.svg" alt="">
+            <div class="carousel-item">
+                <div class="reviews__content">
+                    <div class="content-holder">
+                        <img src="images/reviews-2/James.png" alt="">
+                        <div class="reviews__text">
+                            <p class="text__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque nec diam
+                                platea ullamcorper feugiat amet. Id aliquet vehicula feugiat arcu arcu nulla ornare. Sed amet
+                                venenatis, massa sit.</p>
+                            <hr class="text__hr">
+                            <h2 class="text__user-name">James Philips</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="reviews__content">
+                    <div class="content-holder">
+                        <img src="images/reviews-2/James.png" alt="">
+                        <div class="reviews__text">
+                            <p class="text__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque nec diam
+                                platea ullamcorper feugiat amet. Id aliquet vehicula feugiat arcu arcu nulla ornare. Sed amet
+                                venenatis, massa sit.</p>
+                            <hr class="text__hr">
+                            <h2 class="text__user-name">James Philips</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#reviews-2" data-bs-slide="prev">
+            <img src="images/reviews/arrow.svg" alt="">
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#reviews-2" data-bs-slide="next">
+            <img class="next" src="images/reviews/arrow.svg" alt="">
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
     <div class="clients">
         <div class="container">
@@ -665,4 +722,5 @@
 </div>
 </body>
 <script src="script.js"></script>
+<script src="index.js" type="module"></script>
 </html>

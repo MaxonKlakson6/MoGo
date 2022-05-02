@@ -16,3 +16,4 @@ import './scss/clients.scss';
 import './scss/stories.scss';
 import './scss/map.scss';
 import './scss/footer.scss';
+import './script.js';
