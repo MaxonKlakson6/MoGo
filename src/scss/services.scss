@@ -1,37 +1,42 @@
 @import 'blanks.scss';
 
-.services{
+.services {
   @include desktop-width();
   padding: 0 16px;
 
-  .services__list{
+  .services__list {
     margin: 88px 0 91px;
     display: flex;
     flex-wrap: wrap;
 
-    .services__item{
+    .services__item {
       width: 33.3%;
       display: flex;
       justify-content: space-between;
       padding-bottom: 66px;
 
-      &:nth-child(n + 4){
+      &:nth-child(n + 4) {
         padding: 66px 0 0;
       }
 
-      img{
+      img {
         align-self: flex-start;
+        animation-name: jump;
+        animation-delay: 3s;
+        animation-iteration-count: infinite;
+        animation-duration: 2s;
       }
 
-      .item__description{
+      .item__description {
         align-self: center;
         margin-left: 30px;
 
-        .description__title{
+        .description__title {
           @include font(Raleway, 24px, 700, $black);
           padding: 24px 0;
         }
-        .description__text{
+
+        .description__text {
           @include font(Raleway, 18px, 400, $black);
           padding: 22px 0;
         }
@@ -40,30 +45,31 @@
   }
 }
 
-@media (max-width: 1024px){
-  .services{
-    .services__list{
+@media (max-width: 1024px) {
+  .services {
+    .services__list {
       margin: 75px 0 58px;
 
-      .services__item{
+      .services__item {
         padding-bottom: 56px;
 
-        &:nth-child(n + 4){
+        &:nth-child(n + 4) {
           padding: 10px 0 0;
         }
 
-        img{
+        img {
           width: 53px;
         }
 
-        .item__description{
+        .item__description {
           margin-left: 28px;
 
-          .description__title{
+          .description__title {
             font-size: 18px;
             padding: 15px 0;
           }
-          .description__text{
+
+          .description__text {
             font-size: 14px;
             padding: 5px 0 19px;
           }
@@ -74,28 +80,47 @@
 }
 
 @media (max-width: 768px) {
-  .services{
-    .services__list{
+  .services {
+    .services__list {
       flex-direction: column;
       align-items: center;
 
-      .services__item{
+      .services__item {
         width: 100%;
         display: flex;
         justify-content: center;
         padding-bottom: 42px;
 
-        &:nth-child(n + 4){
+        &:nth-child(n + 4) {
           padding: 0 0 42px;
         }
-        &:last-child{
+
+        &:last-child {
           padding-bottom: 0;
         }
 
-        .item__description{
+        .item__description {
           margin-left: 23px;
         }
       }
     }
+  }
+}
+
+@keyframes jump {
+  from {
+    transform: translateY(0);
+  }
+
+  25%{
+    transform: translateY(-30px);
+  }
+
+  50%{
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(0);
   }
 }

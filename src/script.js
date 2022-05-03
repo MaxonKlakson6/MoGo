@@ -10,7 +10,7 @@ const hideContent = () =>{
     document.querySelector('.header__content').classList.toggle('hidden');
 }
 
-new Swiper('.slider', {
+new Swiper('.reviews-container', {
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',

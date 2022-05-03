@@ -48,6 +48,13 @@
 
           .inner__logo{
             width: 35px;
+            
+            &:hover rect{
+              fill: $pink;
+            }
+            &:hover path{
+              fill: #fff;
+            }
           }
         }
       }

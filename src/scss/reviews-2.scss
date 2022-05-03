@@ -1,7 +1,8 @@
 @import "blanks";
 
 .reviews-2{
-
+  max-width: 1250px;
+  margin: 0 auto;
   button{
     .next{
       transform: rotate(180deg);

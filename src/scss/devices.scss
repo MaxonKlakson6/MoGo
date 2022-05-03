@@ -1,12 +1,12 @@
 @import 'blanks.scss';
 
-.devices{
+.devices {
   position: relative;
   background: url("../images/devices/devices-bg.png");
   background-size: cover;
   padding-bottom: 57px;
 
-  &:before{
+  &:before {
     content: '';
     position: absolute;
     width: 100%;
@@ -14,55 +14,60 @@
     background: rgba(255, 255, 255, 0.8);
   }
 
-  .container{
+  .container {
     @include desktop-width();
 
-      .tablet-holder{
-        margin-top: 59px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
+    .tablet-holder {
+      margin-top: 59px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
 
-        .tablet{
-          z-index: 2;
-          object-fit: cover;
-          width: 60.2%;
-        }
+      .tablet {
+        z-index: 2;
+        object-fit: cover;
+        width: 60.2%;
+      }
 
-        .tablet-inner{
-          position: absolute;
-          width: 57%;
-        }
+      .tablet-inner {
+        position: absolute;
+        width: 57%;
+      }
 
-        .tablet-phone{
-          position: absolute;
-          width: 17.5%;
-          z-index: 3;
-          right: 17%;
-          bottom: -20%;
+      .tablet-phone {
+        position: absolute;
+        width: 17.5%;
+        z-index: 3;
+        right: 17%;
+        bottom: -20%;
+
+        &:hover {
+          animation-name: call;
+          animation-duration: 2s;
         }
       }
+    }
   }
 }
 
 @media (max-width: 1024px) {
-  .devices{
+  .devices {
     padding-bottom: 38px;
 
-    .container{
-      .tablet-holder{
+    .container {
+      .tablet-holder {
         margin-top: 40px;
 
-        .tablet{
+        .tablet {
           width: 47.2%;
         }
 
-        .tablet-inner{
+        .tablet-inner {
           width: 44.6%;
         }
 
-        .tablet-phone{
+        .tablet-phone {
           width: 13.5%;
           right: 24%;
         }
@@ -72,27 +77,45 @@
 }
 
 @media (max-width: 768px) {
-  .devices{
+  .devices {
     padding-bottom: 38px;
 
-    .container{
-      .tablet-holder{
+    .container {
+      .tablet-holder {
         margin-top: 40px;
         width: 100%;
 
-        .tablet{
+        .tablet {
           width: 100%;
         }
 
-        .tablet-inner{
+        .tablet-inner {
           width: 97%;
         }
 
-        .tablet-phone{
+        .tablet-phone {
           width: 28.7%;
           right: 9%;
         }
       }
     }
+  }
+}
+
+@keyframes call {
+  from {
+    transform: rotate(0deg);
+  }
+
+  33% {
+    transform: rotate(10deg);
+  }
+
+  66% {
+    transform: rotate(-10deg);
+  }
+
+  to {
+    transform: rotate(0deg);
   }
 }

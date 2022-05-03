@@ -46,15 +46,27 @@
 
       img:hover~.item__inner{
         display: flex;
+        opacity: 0;
       }
       .item__inner:hover{
         display: flex;
+        animation-name: appear;
+        animation-duration: 1s;
       }
       .work__image{
         width: 100%;
         height: 100%;
       }
     }
+  }
+}
+
+@keyframes appear{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
   }
 }
 

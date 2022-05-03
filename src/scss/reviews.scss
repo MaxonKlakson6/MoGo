@@ -17,6 +17,11 @@ $grey: #F8F8F8;
     content: url("../images/reviews/arrow.svg");
   }
 
+  .wrapper{
+    max-width: 1250px;
+    margin: 0 auto;
+  }
+
   .reviews__content{
     padding: 42px 16px;
     margin: 0 auto;
